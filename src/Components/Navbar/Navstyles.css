@@ -24,7 +24,7 @@
     /* font-weight: 600; */
   }
   .navbar a:hover {
-    color: #0062b3;
+    color: var(--textcolor);
   }
   .content {
     max-width: 600px;
