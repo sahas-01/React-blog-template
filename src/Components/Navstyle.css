@@ -1,0 +1,32 @@
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .navbar h1 {
+    color: #0062b3;
+    font-size: 1.25em;
+  }
+  .navbar .links {
+    margin-left: auto;
+    list-style: none;
+  }
+  .navbar a {
+    margin: 20px 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+    /* font-weight: 600; */
+  }
+  .navbar a:hover {
+    color: #0062b3;
+  }
+  .content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+  }
