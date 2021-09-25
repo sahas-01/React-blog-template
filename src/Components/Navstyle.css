@@ -9,11 +9,12 @@
   }
   .navbar h1 {
     color: #0062b3;
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
   .navbar .links {
     margin-left: auto;
     list-style: none;
+    float: right;
   }
   .navbar a {
     margin: 20px 10px;
