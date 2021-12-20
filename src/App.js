@@ -12,11 +12,7 @@ function App() {
       <div className="app">
         <Navbar />
         <div className="content">
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Home />
         </div>
       </div>
     </Router>

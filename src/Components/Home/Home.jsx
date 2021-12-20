@@ -1,31 +1,29 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import useFetch from "../../useFetch";
 import BlogList from "../BlogList/BlogList";
 import { data } from "../data";
 import Homestyle from '../Home/Home.css'
+import axios from "axios";
 
 const Home = () => {
 
-    const {data : blogs,isPending,error} = useFetch('http://localhost:8000/blogs')
-  
+    const [blogs, setBlogs] = useState("");
+    React.useEffect(() => {
+        fetch('http://localhost:8000/blogs')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setBlogs(data);
+            })
+    }, []);
 
-    // const handleDelete = (id) => {
-    //     const filteredBlog = blogs.filter(blog=> blog.id != id)
-    //     setBlogs(filteredBlog);
-    // }
-    // const handleDelete = (id) => {
-    //     const newBlogs = blogs.filter(blog => blog.id !== id);
-    //     setBlogs(newBlogs);
-    // }
 
-    
 
-    
 
     return (
         <div className="home">
-            {error && <div>{error}</div>}
-            {isPending && <div>Loading.....</div>}
             {blogs && <BlogList blogs={blogs} />}
         </div>
     );
